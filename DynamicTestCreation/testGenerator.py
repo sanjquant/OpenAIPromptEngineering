@@ -2,7 +2,7 @@ import os
 
 import openai
 
-
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 class QuizGenerator:
     def init(self, topic, option_count, question_count):
@@ -25,7 +25,7 @@ class QuizGenerator:
         raise ValueError("Prompt not accepted.")
 
     def create_quiz(self, prompt):
-        openai.api_key = os.environ["OPENAI_API_KEY1"]
+       
         response = openai.Completion.create(engine="text-davinci-003",
                                             prompt=prompt,
                                             max_tokens=256,

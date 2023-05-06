@@ -2,7 +2,6 @@ import os
 from aiTestInstructor import Instructor
 
 from quizSimultor import Quiz
-os.environ["OPENAI_API_KEY1"] = "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"  # gayatri's key
 instruction = Instructor()
 
 student_perspective, correct_answers = instruction.generate_complete_quiz()
